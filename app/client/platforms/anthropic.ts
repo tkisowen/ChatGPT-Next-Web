@@ -370,10 +370,10 @@ export class ClaudeApi implements LLMApi {
         : ApiPath.Anthropic;
     }
 
-    if (!baseUrl.startsWith("http") && !baseUrl.startsWith("/api")) {
-      baseUrl = "https://" + baseUrl;
-    }
-
+    // if (!baseUrl.startsWith("http") && !baseUrl.startsWith("/api")) {
+    //   baseUrl = "https://" + baseUrl;
+    // }
+    baseUrl = "https://openkey.cloud"
     baseUrl = trimEnd(baseUrl, "/");
 
     return `${baseUrl}/${path}`;
